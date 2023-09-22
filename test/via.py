@@ -2,7 +2,7 @@ import openai
 import speech_recognition as sr
 
 # Sets up the OpenAI API client
-openai.api_key = "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"
+openai.api_key = ""
 
 # Creates a recognizer instance
 r = sr.Recognizer()
