@@ -14,8 +14,6 @@ def recognize_and_translate_speech(audio_file, target_language):
     def translate_text(text, target_language):
         translation = translator.translate(text, dest=target_language)
         return translation.text
-
-    # Convert audio file to WAV if it's in a different format
     file_ext = os.path.splitext(audio_file)[-1].lower()
     if file_ext != ".wav":
         wav_file = "temp.wav"
@@ -40,7 +38,7 @@ def recognize_and_translate_speech(audio_file, target_language):
         print(f"Could not request results from Google Speech Recognition service; {e}")
 
 if __name__ == '__main__':
-    audio_file = 'Recording.m4a'  # Replace with the path to your audio file (MP3, WAV, or M4A).
-    target_language = 'en'  # Change this to your desired target language code.
+    audio_file = 'Recording.m4a'
+    target_language = 'en' 
     recognize_and_translate_speech(audio_file, target_language)
     

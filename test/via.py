@@ -1,20 +1,10 @@
 import openai
 import speech_recognition as sr
-
-# Sets up the OpenAI API client
 openai.api_key = ""
-
-# Creates a recognizer instance
 r = sr.Recognizer()
-
-# Configures the microphone as the audio source
 mic = sr.Microphone()
-
-# Configures the speech recognition request
-languages = ['en-US', 'es-MX', 'fr-FR'] # List of language codes
+languages = ['en-US', 'es-MX', 'fr-FR']
 transcriptions = {}
-
-# Starts listening to the microphone and transcribing in real-time
 with mic as source:
     r.adjust_for_ambient_noise(source)
     print("Say something!")
@@ -26,7 +16,7 @@ with mic as source:
                 transcriptions[lang] = text
                 response = openai.Completion.create(
                     engine="text-davinci-002",
-                    prompt=f"Translate '{text}' to Spanish", # Change to desired output language
+                    prompt=f"Translate '{text}' to Spanish",
                     max_tokens=60,
                     n=1,
                     stop=None,
