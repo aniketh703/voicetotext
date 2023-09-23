@@ -3,10 +3,10 @@
 This Python script uses the `speech_recognition` library to recognize spoken text and the `translate` library to translate it into a target language. It also includes language detection using the `cld2-cffi` library.
 ## Prerequisites
 Before running the script, you need to install the required libraries. You can install them using pip:
-pip install speechrecognition translate cld2-cffi
+#pip install speechrecognition translate cld2-cffi
 Usage:
 Run the Python script:
-python speech_recognition_translation.py
+#python speech_recognition_translation.py
 The script will listen to your microphone input and recognize spoken text.
 It will detect the language of the spoken text using cld2-cffi and print the detected language.
 The detected text in the original language will be displayed.
