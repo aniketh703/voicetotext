@@ -22,7 +22,7 @@ while True:
         input("Press Enter to stop recording...")
         recording = False
         try:
-            text = r.recognize_google(audio)
+            text = r.recognize_google(audio, language='hi-IN,ta-IN,te-IN')
             detected_language = detect(text) 
             transcriptions[detected_language] = text
             print(f'Detected language: {detected_language}')
