@@ -1,9 +1,9 @@
 # voicetotext
 # Speech Recognition and Translation in Python
-This Python script uses the `speech_recognition` library to recognize spoken text and the `translate` library to translate it into a target language. It also includes language detection using the `cld2-cffi` library.
+This Python script uses the `speech_recognition` library to recognize spoken text and the `translate` library to translate it into a target language.
 ## Prerequisites
 Before running the script, you need to install the required libraries. You can install them using pip:
-## pip install speechrecognition translate cld2-cffi
+#pip install speechrecognition translate cld2-cffi
 Usage:
 Run the Python script:
 ## python speech_recognition_translation.py
